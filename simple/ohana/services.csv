@@ -1,0 +1,18 @@
+id,program_id,location_id,name,alternate_name,description,website,email,status,application_process,wait_time,accepted_payments,eligibility,email,fees,funding_sources,interpretation_services,keywords,languages,required_documents,service_areas,taxonomy_ids
+1,,1,Never Homeless Helpline,,"The Never Homeless Helpline refers any persons without access to housing to services within Example City. Services are first come, first serve. Due to demand, there may be a waiting list.",,neverhomeless@example.com,active,Call for further information,,,,,,,,,,,,
+2,,2,Yound Minds,,"Young Minds program helps young people complete their high school education, preparing them for lifelong success with mentorship, funding and community support. Our engagement with the students begins with an evaluation to provide each young person with a personalised program for success.",,,active,,,,,,,,,,,,,
+3,,3,Grocery Tax Break Donation,,"A service to collect and report on in-date food from grocery stores within Example City limits, allowing stores to benefit from city-funded tax breaks as well as helping to feed those in need.",,,active,,,,,,,,,,,,,
+4,,3,Food Safety Program,,A pay-as-you-feel training program for nonprofit organisations perparing or seeking to prepare food within Example City.,,,inactive,,,,,,,,,,,,,
+5,,4,Al-Anon Family Group,,Provides support for family and friends of people with a drinking problem.,,,active,,,,,,,,,,,,,
+6,,5,Shop Assist,,Provides assisted social shopping for the elderly with twice weekly bus services and assistance provided by volunteers. This service is heavily subscribed and waiting period may apply.,,,active,Call our offices to apply or for more information,28 days,,,,,,,,,,,
+7,,6,Example City Summer Camp,,"Carnival Bay provides summer camp sessions for residents of Example City. Summer camp activities include: arts & crafts, field trips, indoor activities, outdoor games, free swim lessons, and swimming.",,,active,,,,,,,,,,,,,
+8,,7,Dear Teacher Skills Refresh,,"The skills refresh offers teaching staff in Example City free refresher courses in <ul>
+  <li>Digital Skills</li>
+  <li>Childhood Development</li>
+  <li>Languages: Spanish</li>
+</ul>",,,inactive,,,,,,,,,,,,,
+9,,8,Parks Disability Services,,"Parks Disability Service works to make Example City parks and their recreation programs accessible to persons with disabilities, removing architectural barriers and creating special programs for the disabled, such as wheelchair tennis, quad rugby, and beep baseball.",,,active,,,,,,,,,,,,,
+10,,9,The City's Kitchen,,"The Soup Kitchen operates seven days a week, 365 days a year. It serves two hot meals per day.",,,active,,,,,,,,,,,,,
+11,,10,Meals To-Go at The Cross,,"Meals To-Go at The Cross provides a bag lunch on a pay-as-you-can basis. Donors can buy a healthy bag lunch and donate a bag lunch to anyone in need of a meal. For a pre-paid meal, please take a prepaid slip from our ""Feed the City"" wall.",,,active,,,,,,,,,,,,,
+12,,10,Wash & Go at The Cross,,"Provides dignity for our homeless citizens with a free, clean place to shower and take care of personal needs. Stalls are lockable for privacy and safety. A caretaker is available at all times.This service is supported by matched donations from City Hall.",,,inactive,,,,,,,,,,,,,
+13,,10,Bubbles at The Cross,,Bubbles At The Cross provides low-cost and pay-as-you-can services to anyone needing laundry services in Example City. ,,,active,,,,,,,,,,,,,

@@ -1,0 +1,249 @@
+{
+  "name": "hsds_simple_sample",
+  "title": "hsds simple sample",
+  "description": "A simple sample Human Services Data Specification datapackage.",
+  "homepage": "http://openreferral.org/documentation",
+  "version": "0.1",
+  "license": "CC 4.0 BY SA",
+  "author": "Edafe Onerhime",
+  "resources": [
+    {
+      "name": "simple_sample_organizations",
+      "title": "simple sample: organizations",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "alternate_name",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "year_incorporated",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "email",
+            "type": "string",
+            "format": "email"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "tax_id",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "legal_status",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "tax_status",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "path": "organizations.csv",
+      "format": "CSV",
+      "mediatype": "text/csv",
+      "bytes": 2399
+    },
+    {
+      "name": "simple_sample_locations",
+      "title": "simple sample: locations",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "organization_id",
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "alternate_name",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "transportation",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "latitude",
+            "type": "geopoint",
+            "format": "default"
+          },
+          {
+            "name": "longitude",
+            "type": "geopoint",
+            "format": "default"
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "format": "default"
+          }
+        ]
+      },
+      "path": "locations.csv",
+      "format": "CSV",
+      "mediatype": "text/csv",
+      "bytes": 1753
+    },
+    {
+      "name": "simple_sample_services",
+      "title": "simple sample: services",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "organization_id",
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "program_id",
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "location_id",
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "alternate_name",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "format": "uri"
+          },
+          {
+            "name": "email",
+            "type": "string",
+            "format": "email"
+          },          
+          {
+            "name": "status",
+            "type": "string",
+            "format": "default"
+          }, 
+          {
+            "name": "application_process",
+            "type": "string",
+            "format": "default"
+          }, 
+          {
+            "name": "wait_time",
+            "type": "string",
+            "format": "default"
+          }                               
+        ]
+      },
+      "path": "services.csv",
+      "format": "CSV",
+      "mediatype": "text/csv",
+      "bytes": 4564
+    },
+    {
+      "name": "simple_sample_metadata",
+      "title": "simple sample: metadata",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "resource_id",
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "last_action_date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "last_action_type",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "field_name",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "previous_value",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "replacement_value",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "updated_by",
+            "type": "string",
+            "format": "default"
+          }
+        ]
+      },
+      "path": "metadata.csv",
+      "format": "CSV",
+      "mediatype": "text/csv",
+      "bytes": 25532
+    }            
+  ]
+}

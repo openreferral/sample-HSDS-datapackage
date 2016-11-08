@@ -1,0 +1,11 @@
+id,location_id,contact_id,organization_id,service_id,number,vanity_number,extension,department,number_type,country_prefix
+1,,,1,,000-000-0000,,,,voice,
+2,,,2,,000-000-0000,,,,voice,
+3,,,3,,000-000-0000,,,,voice,
+5,,,4,,000-000-0000,,,,voice,
+6,,,5,,000-000-0000,,,,voice,
+7,,,6,,000-000-0000,,,,voice,
+8,,,7,,000-000-0000,,,,voice,
+9,,,8,,000-000-0000,,,,voice,
+10,,,9,,000-000-0000,,,,voice,
+11,,,10,,000-000-0000,,,,voice,

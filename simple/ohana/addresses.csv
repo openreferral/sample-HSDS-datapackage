@@ -1,0 +1,11 @@
+id,location_id,address_1,address_2,city,state_province,postal_code,country
+1,1,Sanctuary on 5th Street,,Example City,CA,90210,US
+2,2,4830 Highland Drive,,Example City,CA,90210,US
+3,3,Beachside Example City Warehouses,,Example City,CA,90210,US
+4,4,The Example Center,,Example City,CA,90210,US
+5,5,Example City Silvers Building,The Shires,Example City,CA,90210,US
+6,6,The Example Center,,Example City,CA,90210,US
+7,7,The Roz Bernstein Building,,Example City,CA,90210,US
+8,8,Example City Hall,,Example City,CA,90210,US
+9,9,Example City Hall,The City's Kitchen,Example City,CA,90210,US
+10,10,St Cross Universal Church,,Example City,CA,90210,US

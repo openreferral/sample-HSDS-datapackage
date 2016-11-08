@@ -1,0 +1,11 @@
+id,organization_id,name,alternate_name,transportation,latitude,longitude,description,accessibility,admin_emails,email,languages,short_desc,website,virtual
+1,1,Sanctuary on 5th Street,,,,,This is the main office and is open to the public during office hours.,,,,,,,TRUE
+2,2,4830 Highland Drive,,39.428192,-119.897426,,This call center is not open to the public.,,,,,,,TRUE
+3,3,Beachside Example City Warehouses,,,,,Access is restricted to authorised distributors and suppliers.,,,,,,,TRUE
+4,4,The Example Center,,,,,Therapy is provided on the 5th floor which is open to visitors with appointments only.,,,,,,,TRUE
+5,5,Example City Silvers Building,The Shires,,,,The Shires is open to the public everyday.,,,,,,,TRUE
+6,6,The Example Center,,,,,The spaces are open to the public.,,,,,,,TRUE
+7,7,The Roz Bernstein Building,,,,,Private offices that are not open to the public.,,,,,,,TRUE
+8,8,Example City Hall,,,,,This is the location of the offices - parks are located throughout Example City.,,,,,,,TRUE
+9,9,Example City Hall,The City's Kitchen,,,,This soup kitchen provides hot meals only.,,,,,,,TRUE
+10,10,St Cross Universal Church,,,,,The venue is open to the public for church services - personal care is provided on-site.,,,,,,,TRUE
