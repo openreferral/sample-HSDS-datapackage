@@ -10,7 +10,8 @@ This example uses fictional data, and only a limited sub-set of the full range o
 
 ## Generating the data
 You can use mockaroo to generate the data in csv format. Below contains links to each of the endpoints containing the OpenReferral schemas.
-[Contacts](https://www.mockaroo.com/a46df0c0)
+
+* [Contacts](https://www.mockaroo.com/a46df0c0)
 
 #### TODO: Add all other models.
 
