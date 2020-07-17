@@ -1,0 +1,517 @@
+{
+  "name": "hsds_simple_sample",
+  "title": "HSDS Simple Sample 1.1",
+  "description": "A simple sample Human Services Data Specification datapackage - Version 1.1",
+  "homepage": "http://openreferral.org/documentation",
+  "version": "0.1",
+  "license": "CC 4.0 BY SA",
+  "author": "Edafe Onerhime, Tim Davies",
+  "resources": [
+    {
+      "name": "organization",
+      "path": "organizations.csv",
+      "description": "The organization record is used to provide basic description and details about each organization delivering services. Each service should be linked to the organization responsible for its delivery. One organization may deliver many services.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "string",
+            "description": "Each organization must have a unique identifier.",
+            "format": "uuid",
+            "constraints": {
+              "required": true,
+              "unique": true
+            }
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "The official or public name of the organization.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "alternate_name",
+            "type": "string",
+            "description": "Alternative or commonly used name for the organization.",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "description",
+            "type": "string",
+            "description": "A brief summary about the organization. It can contain markup such as HTML or Markdown.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "email",
+            "type": "string",
+            "description": "The contact e-mail address for the organization.",
+            "format": "email",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "format": "url",
+            "description": "The URL (website address) of the organization.",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "tax_status",
+            "type": "string",
+            "description": "Government assigned tax designation for for tax-exempt organizations.",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "tax_id",
+            "type": "string",
+            "description": "A government issued identifier used for the purpose of tax administration.",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "year_incorporated",
+            "type": "date",
+            "format": "%Y",
+            "description": "The year in which the organization was legally formed.",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "legal_status",
+            "type": "string",
+            "description": "The legal status defines the conditions that an organization is operating under; e.g. non-profit, private corporation or a government organization.",
+            "constraints": {
+              "required": false
+            }
+          }
+        ],
+        "primaryKey": "id"
+      }
+    },
+    {
+      "name": "service",
+      "description": "Services are provided by organizations to a range of different groups. Details on where each service is delivered are contained in the services_at_location table.",
+      "path": "services.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "string",
+            "description": "Each service must have a unique identifier.",
+            "constraints": {
+              "required": true,
+              "unique": true
+            }
+          },
+          {
+            "name": "organization_id",
+            "type": "string",
+            "description": "The identifier of the organization that provides this service.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "program_id",
+            "description": "The identifier of the program this service is delivered under.",
+            "type": "string",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "name",
+            "description": "The official or public name of the service.",
+            "type": "string",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "alternate_name",
+            "description": "Alternative or commonly used name for a service.",
+            "type": "string",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "description",
+            "description": "A description of the service.",
+            "type": "string",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "url",
+            "description": "URL of the service",
+            "type": "string",
+            "format": "url",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "email",
+            "description": "Email address for the service",
+            "type": "string",
+            "format": "email",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "status",
+            "description": "The current status of the service.",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "active",
+                "inactive",
+                "defunct",
+                "temporarily closed"
+              ],
+              "required": true
+            }
+          },
+          {
+            "name": "interpretation_services",
+            "description": "A description of any interpretation services available for accessing this service.",
+            "type": "string",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "application_process",
+            "description": "The steps needed to access the service.",
+            "type": "string",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "wait_time",
+            "description": "Time a client may expect to wait before receiving a service.",
+            "type": "string",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "fees",
+            "description": "Details of any charges for service users to access this service.",
+            "type": "string",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "accreditations",
+            "description": "Details of any accreditations. Accreditation is the formal evaluation of an organization or program against best practice standards set by an accrediting organization.",
+            "type": "string",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "licenses",
+            "description": "An organization may have a license issued by a government entity to operate legally. A list of any such licenses can be provided here.",
+            "type": "string",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "taxonomy_ids",
+            "description": "(Deprecated) A comma separated list of identifiers from the taxonomy table. This field is deprecated in favour of using the service_taxonomy table.",
+            "type": "string",
+            "constraints": {
+              "required": false
+            }
+          }
+        ],
+        "primaryKey": "id",
+        "foreignKeys": [
+          {
+            "fields": "organization_id",
+            "reference": {
+              "resource": "organization",
+              "fields": "id"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "service_at_location",
+      "path": "services_at_location.csv",
+      "description": "The services at location table creates a link between a service and a specific location.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "description": "Each entry must have a unique identifier.",
+            "type": "string",
+            "constraints": {
+              "required": true,
+              "unique": true
+            }
+          },
+          {
+            "name": "service_id",
+            "description": "The identifier of the service at a given location.",
+            "type": "string",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "location_id",
+            "description": "The identifier of the location where this service operates.",
+            "type": "string",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "description",
+            "description": "Any additional information that should be displayed to users about the service at this specific location.",
+            "type": "string"
+          }
+        ],
+        "primaryKey": "id",
+        "foreignKeys": [
+          {
+            "fields": "service_id",
+            "reference": {
+              "resource": "service",
+              "fields": "id"
+            }
+          },
+          {
+            "fields": "location_id",
+            "reference": {
+              "resource": "location",
+              "fields": "id"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "location",
+      "path": "locations.csv",
+      "description": "The location tables provides details of the locations where organizations operate. Locations may be virtual, and one organization may have many locations.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "description": "Each location must have a unique identifier",
+            "type": "string",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "organization_id",
+            "description": "Each location entry should be linked to a single organization. This is the organization that is responsible for maintaining information about this location. The identifier of the organization should be given here. Details of the services the organisation delivers at this location should be provided in the services_at_location table.",
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "description": "The name of the location",
+            "type": "string"
+          },
+          {
+            "name": "alternate_name",
+            "description": "An alternative name for the location",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "description": "A description of this location.",
+            "type": "string",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "transportation",
+            "description": "A description of the access to public or private transportation to and from the location.",
+            "type": "string"
+          },
+          {
+            "name": "latitude",
+            "description": "Y coordinate of location expressed in decimal degrees in WGS84 datum.",
+            "type": "number"
+          },
+          {
+            "name": "longitude",
+            "description": "X coordinate of location expressed in decimal degrees in WGS84 datum.",
+            "type": "number"
+          }
+        ],
+        "primaryKey": "id",
+        "foreignKeys": [
+          {
+            "fields": "organization_id",
+            "reference": {
+              "resource": "organization",
+              "fields": "id"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "phone",
+      "path": "phones.csv",
+      "description": "The phone table contains details of the telephone numbers are used to contact organizations, services, and locations.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "description": "Each entry must have a unique identifier",
+            "type": "string",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "location_id",
+            "description": "The identifier of the location where this phone number is located",
+            "type": "string"
+          },
+          {
+            "name": "service_id",
+            "description": "The identifier of the service for which this is the phone number",
+            "type": "string"
+          },
+          {
+            "name": "organization_id",
+            "description": "The identifier of the organisation for which this is the phone number",
+            "type": "string"
+          },
+          {
+            "name": "contact_id",
+            "description": "The identifier of the contact for which this is the phone number",
+            "type": "string"
+          },
+          {
+            "name": "service_at_location_id",
+            "description": "The identifier of the 'service at location' table entry, when this phone number is specific to a service in a particular location.",
+            "type": "string"
+          },
+          {
+            "name": "number",
+            "description": "The phone number",
+            "type": "string",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "extension",
+            "description": "The extension of the phone number",
+            "type": "number"
+          },
+          {
+            "name": "type",
+            "description": "Indicates the type of phone service, drawing from the RFC6350 list of types (text (for SMS), voice, fax, cell, video, pager, textphone).",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "text",
+                "voice",
+                "fax",
+                "cell",
+                "video",
+                "pager",
+                "textphone"
+              ]
+            }
+          },
+          {
+            "name": "language",
+            "description": "A comma separated list of ISO 639-1, or ISO 639-2 [language codes](available at http://www.loc.gov/standards/iso639-2/php/code_list.php) to represent the languages available from this phone service. The three-letter codes from ISO 639-2 provide greater accuracy when describing variants of languages, which may be relevant to particular communities.",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "description": "A description providing extra information about the phone service (e.g. any special arrangements for accessing, or details of availability at particular times.",
+            "type": "string"
+          },
+          {
+            "name": "department",
+            "description": "(Deprecated) The department for which this is the phone number. This field is deprecated and will be removed in a future version of HSDS.",
+            "type": "string"
+          }
+        ],
+        "primaryKey": "id",
+        "foreignKeys": [
+          {
+            "fields": "organization_id",
+            "reference": {
+              "resource": "organization",
+              "fields": "id"
+            }
+          },
+          {
+            "fields": "location_id",
+            "reference": {
+              "resource": "location",
+              "fields": "id"
+            }
+          },
+          {
+            "fields": "service_id",
+            "reference": {
+              "resource": "service",
+              "fields": "id"
+            }
+          },
+          {
+            "fields": "contact_id",
+            "reference": {
+              "resource": "contact",
+              "fields": "id"
+            }
+          },
+          {
+            "fields": "service_at_location_id",
+            "reference": {
+              "resource": "service_at_location",
+              "fields": "id"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
